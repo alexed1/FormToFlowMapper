@@ -7,6 +7,7 @@ public with sharing class GenerateCustomClasses {
 
         for (Request curRequest : requestList) {
             Result response = new Result();
+            //TODO need to error check that the keys don't have illegal characters like spaces. if they do, the process fails silently
             Map<String,String> fieldData = (Map<String,String>)JSON.deserialize(curRequest.serializedKeyValuePairMap,Map<String,String>.class);
             String formName = curRequest.datasetName;
             //generate the Data class that will allow the semi structured input data to be handled by flow
