@@ -1,15 +1,12 @@
-public  with sharing class FormType_CreateContact extends FormType_Base {
+public  with sharing class FormType_CreateContact {
 
-
-    @AuraEnabled
+    @auraEnabled
     public   string firstName;
     
-    @AuraEnabled
+    @auraEnabled
     public   string lastName; 
 
-    @AuraEnabled
+    @auraEnabled
     public   string address ; 
-
-
 
 }

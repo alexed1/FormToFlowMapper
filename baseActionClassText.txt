@@ -1,4 +1,4 @@
-public with sharing  class FormToFlow_MapCreateContact {
+ public with sharing  class FormToFlow_MapCreateContact {
  
     @InvocableMethod
     public static List <Result> process(List<Request> requestList) {
@@ -35,4 +35,4 @@ public with sharing  class FormToFlow_MapCreateContact {
     public static FormType_CreateContact Convert(Map<String, String> extractedFormDataMap) {
         return  (FormType_CreateContact)JSON.deserialize(JSON.serialize(extractedFormDataMap),FormType_CreateContact.class);
     }
-}
+} 
